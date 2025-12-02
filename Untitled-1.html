@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Completo em HTML</title>
+</head>
+<body>
+
+<h1 style="text-align:center;">🌐 Sistema Completo em HTML</h1>
+<hr>
+
+<!-- LOGIN -->
+<section id="login">
+    <h2>🔐 Login</h2>
+
+    <details open>
+        <summary><b>Acessar conta</b></summary><br>
+
+        <form action="#dashboard">
+            <label>Email:</label><br>
+            <input type="email" required><br><br>
+
+            <label>Senha:</label><br>
+            <input type="password" required><br><br>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <p><a href="#cadastro">Criar conta</a></p>
+    </details>
+</section>
+
+<hr>
+
+<!-- CADASTRO -->
+<section id="cadastro">
+    <h2>📝 Cadastro</h2>
+
+    <details>
+        <summary><b>Criar nova conta</b></summary><br>
+
+        <form action="#login">
+            <label>Nome:</label><br>
+            <input type="text" required><br><br>
+
+            <label>Data de nascimento:</label><br>
+            <input type="date" required><br><br>
+
+            <label>ID:</label><br>
+            <input type="number" required><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" required><br><br>
+
+            <label>Senha:</label><br>
+            <input type="password" required><br><br>
+
+            <label>Confirmar senha:</label><br>
+            <input type="password" required><br><br>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <p><a href="#login">Já tenho conta</a></p>
+    </details>
+</section>
+
+<hr>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+    <h2>📊 Dashboard</h2>
+
+    <details open>
+        <summary><b>Abrir Painel</b></summary><br>
+
+        <p>Bem-vindo ao sistema!</p>
+
+        <ul>
+            <li><a href="#tarefas">Gerenciar Tarefas</a></li>
+            <li><a href="#login">Sair</a></li>
+        </ul>
+    </details>
+</section>
+
+<hr>
+
+<!-- TAREFAS -->
+<section id="tarefas">
+    <h2>🗂️ Gerenciamento de Tarefas</h2>
+
+    <details open>
+        <summary><b>Gerenciar lista</b></summary><br>
+
+        <!-- Formulário de adicionar tarefa -->
+        <form action="#tarefas">
+            <input type="text" placeholder="Digite uma tarefa" name="novaTarefa" required>
+            <button type="submit">Adicionar tarefa</button>
+        </form>
+
+        <h3>📌 Tarefas</h3>
+
+        <ul>
+            <!-- Cada tarefa tem seu próprio checkbox escondido para simular exclusão -->
+            <li>
+                <input type="checkbox" id="tarefa1" style="display:none;">
+                <label for="tarefa1" style="cursor:pointer;">
+                    Exemplo de tarefa ✅ (clique para excluir)
+                </label>
+            </li>
+            <li>
+                <input type="checkbox" id="tarefa2" style="display:none;">
+                <label for="tarefa2" style="cursor:pointer;">
+                    Tarefa 2 ✅ (clique para excluir)
+                </label>
+            </li>
+        </ul>
+
+        <p><a href="#dashboard">Voltar ao Dashboard</a></p>
+    </details>
+</section>
+
+</body>
+</html>
